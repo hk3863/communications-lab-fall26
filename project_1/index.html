@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POV: You're D2 Food</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body id="top">
+    <header>
+        <a class="brand" href="#top">POV: You're D2 Food</a>
+        <nav aria-label="Main navigation"><a href="#my-story">About</a><a href="#film">Watch</a><a href="#your-choice">Your choice</a></nav>
+    </header>
+    <main>
+        <section class="hero" aria-labelledby="film-title">
+            <img class="food-decoration hero-tomato" src="assets/food-tomato.png" alt="" aria-hidden="true">
+            <img class="food-decoration hero-broccoli" src="assets/food-broccoli.png" alt="" aria-hidden="true">
+            <img class="food-decoration hero-egg" src="assets/food-egg.png" alt="" aria-hidden="true">
+            <div class="hero-plate">
+                <img src="assets/hero-plate.png" alt="" width="1280" height="1280">
+                <div class="plate-copy">
+                    <h1 id="film-title">Hey. Down here.<br>On your plate.</h1>
+                    <p>A film from the food's perspective.</p>
+                    <a class="button" href="#film">Watch my story ▶</a>
+                </div>
+            </div>
+        </section>
+        <section id="my-story" class="about section-space">
+            <img class="food-decoration about-egg" src="assets/food-egg.png" alt="" aria-hidden="true" loading="lazy">
+            <h2>I'm your lunch.</h2>
+            <p>You pick me. You put me on your plate.<br>But do you finish me?</p>
+            <p>A short film about food waste at D2, told by the food.</p>
+        </section>
+        <section id="film" class="film-section section-space">
+            <h2>See it from my side.</h2>
+            <div class="tray">
+                <video controls playsinline preload="metadata" aria-label="POV: You're D2 Food — student short film">
+                    <source src="assets/pov-youre-d2-food.mp4" type="video/mp4">
+                    Your browser cannot play this video. <a href="assets/pov-youre-d2-food.mp4">Download the film</a>.
+                </video>
+            </div>
+        </section>
+        <section id="your-choice" class="ending section-space" aria-labelledby="game-title">
+            <h2 id="game-title">Still on your plate. Now what?</h2>
+            <p id="game-help">Drag me to your mouth or the bin.<br>Or select a food, then choose Eat or Trash.</p>
+            <div class="game-board">
+                <button id="eat-zone" class="drop-zone eat-zone" type="button" aria-label="Eat selected food">
+                    <img class="drop-target-image" src="assets/game-mouth.png" alt="" draggable="false">
+                    <span>Eat</span>
+                    <small><span id="eaten-count">0</span> eaten</small>
+                </button>
+                <div class="game-plate" aria-label="Food on your plate">
+                    <img class="game-plate-image" src="assets/hero-plate.png" alt="" draggable="false">
+                    <button class="game-food tomato-piece" id="tomato-piece" data-name="Tomato" type="button" draggable="true" aria-label="Select tomato" aria-pressed="false" aria-describedby="game-help">
+                        <img src="assets/food-tomato.png" alt="" draggable="false">
+                    </button>
+                    <button class="game-food broccoli-piece" id="broccoli-piece" data-name="Broccoli" type="button" draggable="true" aria-label="Select broccoli" aria-pressed="false" aria-describedby="game-help">
+                        <img src="assets/food-broccoli.png" alt="" draggable="false">
+                    </button>
+                    <button class="game-food egg-piece" id="egg-piece" data-name="Egg" type="button" draggable="true" aria-label="Select egg" aria-pressed="false" aria-describedby="game-help">
+                        <img src="assets/food-egg.png" alt="" draggable="false">
+                    </button>
+                    <span id="empty-plate" hidden>All gone!</span>
+                </div>
+                <button id="trash-zone" class="drop-zone trash-zone" type="button" aria-label="Trash selected food">
+                    <img class="drop-target-image" src="assets/game-trash-bin.png" alt="" draggable="false">
+                    <span>Trash</span>
+                    <small><span id="trashed-count">0</span> wasted</small>
+                </button>
+            </div>
+            <p id="game-message" role="status" aria-live="polite" aria-atomic="true">Hey! Pick me up.</p>
+            <button id="reset-button" class="reset" type="button">Start again ↺</button>
+            <noscript><p>Turn on JavaScript to play. Take only what you'll eat.</p></noscript>
+        </section>
+        <section id="meet-the-food" class="food-cast section-space" aria-labelledby="cast-title">
+            <h2 id="cast-title">Overheard at lunch.</h2>
+            <p>Small portions. Big personalities.</p>
+            <div class="lunch-scene">
+                <article class="lunch-character">
+                    <p class="speech-bubble">“I'm already blushing. Please don't reject me in public.”</p>
+                    <div class="cast-intro"><img src="assets/food-tomato.png" alt="" loading="lazy"><h3 class="cast-name">The Tomato</h3><span class="cast-role">The drama queen</span></div>
+                </article>
+                <article class="lunch-character">
+                    <p class="speech-bubble">“You ate everything around me. I noticed.”</p>
+                    <div class="cast-intro"><img src="assets/food-broccoli.png" alt="" loading="lazy"><h3 class="cast-name">The Broccoli</h3><span class="cast-role">The misunderstood one</span></div>
+                </article>
+                <article class="lunch-character">
+                    <p class="speech-bubble">“Sunny-side up. Emotionally? Depends where you're taking this tray.”</p>
+                    <div class="cast-intro"><img src="assets/food-egg.png" alt="" loading="lazy"><h3 class="cast-name">The Egg</h3><span class="cast-role">Trying to stay positive</span></div>
+                </article>
+                <article class="lunch-character">
+                    <p class="speech-bubble">“Everyone gets a close-up. I get the dishes.”</p>
+                    <div class="cast-intro"><img src="assets/hero-plate.png" alt="" loading="lazy"><h3 class="cast-name">The Plate</h3><span class="cast-role">Carrying the whole cast</span></div>
+                </article>
+                <article class="lunch-character">
+                    <p class="speech-bubble">“I was told there would be food. Finally, a role I'm qualified for.”</p>
+                    <div class="cast-intro"><img src="assets/game-mouth.png" alt="" loading="lazy"><h3 class="cast-name">The Mouth</h3><span class="cast-role">Here for the catering</span></div>
+                </article>
+                <article class="lunch-character">
+                    <p class="speech-bubble">“Just because I'm open doesn't mean I'm taking lunch reservations.”</p>
+                    <div class="cast-intro"><img src="assets/game-trash-bin.png" alt="" loading="lazy"><h3 class="cast-name">The Bin</h3><span class="cast-role">Please cancel my scene</span></div>
+                </article>
+            </div>
+        </section>
+        <section class="credits section-space">
+            <img class="food-decoration credits-tomato" src="assets/food-tomato.png" alt="" aria-hidden="true" loading="lazy">
+            <img class="food-decoration credits-broccoli" src="assets/food-broccoli.png" alt="" aria-hidden="true" loading="lazy">
+            <h2>Take what you'll eat.<br>Come back for more.</h2>
+            <div class="receipt">
+                <h3>Made by</h3>
+                <div class="receipt-row"><span>Film</span><span>Hyein · Manahil · Jayden</span></div>
+                <div class="receipt-row"><span>Website</span><span>Hyein Kim</span></div>
+            </div>
+        </section>
+    </main>
+    <footer><span>POV: You're D2 Food</span><a href="#top">Back to top ↑</a></footer>
+</body>
+</html>
+
